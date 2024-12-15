@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 // ignore: unused_import
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:language_learning_app/pages/choose_lang/language_choice_screen.dart';
 
 class OnboardingPage extends StatelessWidget {
   const OnboardingPage({super.key});
@@ -90,7 +91,13 @@ class _OnboardingContentState extends State<OnboardingContent> {
           padding: const EdgeInsets.symmetric(horizontal: 20),
           child: ElevatedButton(
             onPressed: () {
-              // Action for "Choose a language" button
+              Navigator.push(
+                context,
+                MaterialPageRoute(
+                  builder: (context) =>
+                      LanguageSelectionApp(),  
+                ),
+              );
             },
             style: ElevatedButton.styleFrom(
               backgroundColor: Colors.deepPurple,
